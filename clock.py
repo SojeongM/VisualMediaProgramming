@@ -19,7 +19,7 @@ clock=pygame.time.Clock()
 
 piano_keysounds=[]
 for i in range(1, 14):
-    filename= f'3_Pygame/piano/FX_piano{i:02}.mp3'
+    filename= f'piano/FX_piano{i:02}.mp3'
    # print(filename)
     s=pygame.mixer.Sound(filename)
     piano_keysounds.append(s)
@@ -134,7 +134,7 @@ def main():
         
         #4
         pygame.display.flip()
-        clock.tick(600)
+        clock.tick(1)
     
     pass
 

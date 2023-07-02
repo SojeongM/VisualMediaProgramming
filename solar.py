@@ -17,9 +17,10 @@ screen=pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 clock=pygame.time.Clock()
 
 current_path = os.path.dirname(__file__)
-assets_path = os.path.join(current_path, '../../3_Pygame/assets')
 
-# 키보드 이미지 초기 설정
+assets_path = os.path.join(current_path, 'assets')
+
+
 alien_image = pygame.image.load(os.path.join(assets_path, 'alien.png'))
 alien_image = pygame.transform.scale(alien_image, (50, 50))
 fire_image = pygame.image.load(os.path.join(assets_path, 'fire.png'))
@@ -27,8 +28,7 @@ fire_image = pygame.transform.scale(fire_image, (100, 100))
 
 piano_keysounds=[]
 for i in range(1, 14):
-    filename= f'3_Pygame/piano/FX_piano{i:02}.mp3'
-    print(filename)
+    filename= f'piano/FX_piano{i:02}.mp3'
     s=pygame.mixer.Sound(filename)
     piano_keysounds.append(s)
 
@@ -332,7 +332,7 @@ def main():
         if suncol==0:
             screen.blit(alien_image, [keyboard_x, keyboard_y])   
         elif suncol==1:
-            filename= f'3_Pygame/snd/폭발1.wav'
+            filename= f'snd/폭발1.wav'
             s=pygame.mixer.Sound(filename)
             s.play()
             screen.blit(fire_image, [keyboard_x, keyboard_y]) 

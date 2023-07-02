@@ -15,13 +15,6 @@ pygame.display.set_caption("문소정 20191585")
 screen=pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 clock=pygame.time.Clock()
 
-piano_keysounds=[]
-for i in range(1, 14):
-    filename= f'3_Pygame/piano/FX_piano{i:02}.mp3'
-    print(filename)
-    s=pygame.mixer.Sound(filename)
-    piano_keysounds.append(s)
-
 def getRegularPolygonVertices(nv, r):
     v=[]
     for i in range(nv):
